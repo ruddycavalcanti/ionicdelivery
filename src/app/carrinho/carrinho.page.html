@@ -1,0 +1,168 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-uppercase">Meu Carrinho</ion-title>
+
+    <ion-buttons slot="end" class="ion-margin">
+      <ion-button  (click)="limparCarrinho()" class="ion-text-capitalize">Limpar</ion-button>  
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="ion-margin">
+
+
+
+    <ion-item class="borderLine ion-margin-bottom" lines="none">
+      <img src="assets/novalgina-1g.png"  slot="start" width="35" />
+    <ion-label>
+      <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos</strong>
+      <p>R$17,90</p>
+    </ion-label>
+    <ion-icon name="trash-outline" slot="end"  (click)="excluirCarrinho('Novalgina 1g Sanofi Aventis 10 Comprimidos')"></ion-icon>
+  </ion-item>
+
+
+  <ion-item class="borderLine ion-margin-bottom" lines="none">
+    <img src="assets/novalgina-1g.png"  slot="start" width="35" />
+  <ion-label>
+    <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos</strong>
+    <p>R$17,90</p>
+  </ion-label>
+  <ion-icon name="trash-outline" slot="end"  (click)="excluirCarrinho('Novalgina 1g Sanofi Aventis 10 Comprimidos')"></ion-icon>
+</ion-item>
+
+  <ion-item class="borderLine ion-margin-bottom" lines="none">
+    <img src="assets/novalgina-1g.png"  slot="start" width="35" />
+  <ion-label>
+    <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos</strong>
+    <p>R$17,90</p>
+  </ion-label>
+  <ion-icon name="trash-outline" slot="end"  (click)="excluirCarrinho('Novalgina 1g Sanofi Aventis 10 Comprimidos')"></ion-icon>
+</ion-item>
+
+<div class="ion-text-center">
+<ion-text shape="clear"  (click)="irParaHome()" >
+  Adicionar mais produtos
+  </ion-text>
+
+
+<br>
+<br>
+<br>
+
+  <ion-item class="borderLine ion-margin-bottom" lines="none">
+    <ion-icon  slot="start" name="locate-outline"></ion-icon>
+  <ion-label>
+    <strong class="ion-text-wrap">Receber agora em</strong>
+    <p>Rua Santo Amaro 470 Itaipu - Casa de equina muro de pedra </p>
+  </ion-label>
+  <ion-icon name="pencil-outline" slot="end"  (click)="irParaMeusEnderecos()"></ion-icon>
+</ion-item>
+
+
+
+<ion-item class="borderLine ion-margin-bottom" lines="none">
+  <ion-icon  slot="start" name="pricetags-outline"></ion-icon>
+<ion-label>
+  <strong class="ion-text-wrap">Adicionar cupom de desconto</strong>
+  <p>PRIMEIRACOMPRA</p>
+</ion-label>
+<ion-icon name="pencil-outline" slot="end"  (click)="addCupom('carrinho')"></ion-icon>
+</ion-item>
+
+
+
+
+<ion-item lines="none" class="ion-no-padding">
+  <ion-label position="stacked"><ion-icon slot="start" name="chatbubble-ellipses-outline"></ion-icon> Instruções para o distribuidor?</ion-label>
+  <ion-textarea rows="3" cols="20" placeholder="Ex.: Se possível entregar tudo em temperatura ambiente. O interno está quebrado, favor ligar quando chegar."></ion-textarea>
+</ion-item>
+
+
+
+</div>
+
+
+<br>
+
+<ion-item  lines="none">
+<ion-label slot="start" >
+  1 produto
+</ion-label>
+<ion-text slot="end"  (click)="editarEndereco()">R$17,90</ion-text>
+</ion-item>
+
+
+<ion-item  lines="none">
+  <ion-label slot="start" >
+    Cupom
+  </ion-label>
+  <ion-text slot="end" ><span class="valorCupom">-R$10,00</span></ion-text>
+  </ion-item>
+
+
+<ion-item  lines="none">
+  <ion-label slot="start" >
+    Taxa de Entrega
+  </ion-label>
+  <ion-text slot="end"  (click)="editarEndereco()">R$4,99</ion-text>
+  </ion-item>
+
+
+<ion-item  lines="none">
+  <ion-label slot="start" >
+    <strong>Total a pagar</strong>
+  </ion-label>
+  <ion-text slot="end"  (click)="editarEndereco()"><strong>R$24,80</strong></ion-text>
+  </ion-item>
+
+
+
+  
+  <ion-item  lines="none"  class="ion-margin-bottom pagoPeloApp" *ngIf="existeFormaPagamento==true">
+    <img slot="start" class="ion-margin-end" src="assets/mastercard.jpg" width="20"/>
+    <ion-text slot="start" >
+ 
+      <p>Crédito pelo app<br>
+        <small >MasterCard **** 9587</small></p>
+      
+    </ion-text>
+
+    <ion-button slot="end" fill="clear" (click)="irParaFormasPgto()">
+      Trocar
+    </ion-button>
+    </ion-item>
+
+
+
+
+    <ion-item  lines="none"  class="ion-margin-bottom ">
+      <ion-text slot="start" >
+   
+        <p>CPF / CNPJ  na nota<br>
+      </ion-text>
+  
+      <ion-button slot="end" fill="clear">
+        Escolher
+      </ion-button>
+      </ion-item>
+
+</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button  size="large" (click)="irParaConfirmarPedido()"  expand="full">
+   {{textoBotao}} 
+    
+   
+  </ion-button>
+
+</ion-footer>
+

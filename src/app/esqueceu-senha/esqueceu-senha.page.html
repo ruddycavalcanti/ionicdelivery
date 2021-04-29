@@ -1,0 +1,42 @@
+
+<ion-content class="ion-text-center ion-padding" >
+
+<div  class="ion-padding" class="loginRegister">
+
+  <p   class="ion-margin-top ion-margin-bottom ion-padding-bottom">
+      <img  width="200" src="assets/imgs/logo.jpg" class="logo"   />
+    </p>
+
+
+  <p    class="ion-text-center ion-padding-top ion-margin-top"> 
+  Preencha o campo abaixo com seu email para recuperar sua senha.
+</p>
+
+
+
+<form #f="ngForm" (ngSubmit)="recuperarSenha(f)">
+
+ 
+  <ion-item >
+      <ion-label  position="floating"><ion-icon slot="start" name="mail-outline"></ion-icon> Email</ion-label>
+      <ion-input name="email"  ngModel  required type="email" value=""></ion-input>
+    </ion-item>
+
+
+    <div class="ion-margin-top" >
+        <ion-button  expand="block" (click)="recuperarSenha()">Enviar</ion-button>
+
+      </div>
+
+
+  </form>
+
+  <br>
+
+  <div class="ion-margin-top ion-text-left">
+    <ion-button fill="outline" (click)="irParaLogin()">Voltar</ion-button>
+  </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!--<ion-back-button defaultHref="/"></ion-back-button>-->
+     
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+  
+    </ion-buttons>
+    <!--<ion-icon defaultHref="/" name="chevron-back-outline"></ion-icon>-->
+    <ion-title class="ion-text-center ion-text-uppercase">R. Santo Amaro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+
+  <div #map id="map"></div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-button  size="large" (click)="irParaAddEditEndereco()"  expand="full">Confirmar Localização</ion-button>
+
+</ion-footer>

@@ -1,0 +1,113 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!--<ion-back-button defaultHref="/"></ion-back-button>-->
+     
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+  
+    </ion-buttons>
+    <!--<ion-icon defaultHref="/" name="chevron-back-outline"></ion-icon>-->
+    <ion-title class="ion-text-center ion-text-uppercase">Meus Dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-text-center ion-padding-top">
+    <img src="assets/imgs/me.jpg" width="80" height="80" style="border-radius:50%" class="ion-rounded">
+    <br>
+    <small class="ion-padding">editar</small>
+    
+   <div class="ion-margin">
+
+
+  <form >
+
+    <ion-item>
+      <ion-label position="floating">Nome Completo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">CPF (opcional)</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Celular</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <br> 
+      
+    <ion-button type="submit" size="large" (click)="salvarMeusDados()"  expand="full">Salvar</ion-button>
+
+
+    </form>
+     <br><br><br> 
+
+
+
+      
+    <h2 class="ion-text-left ion-text-uppercase">Alterar Senha</h2>
+ 
+
+    <form >
+
+
+<ion-item  (click)="abrirOpcoesSenha()" lines="full">
+  <ion-icon name="key-outline"  slot="start" ></ion-icon>
+  <ion-button fill="clear" >
+    Alterar Senha
+  </ion-button>
+  <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+</ion-item>
+
+
+
+
+  <div *ngIf="abrirOpcoesS!=false" class="ion-padding-bottom">
+
+    <ion-item>
+
+      <ion-label position="floating">Senha atual</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nova senha</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Confirmar nova senha</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+   
+    <ion-button type="submit" size="large" (click)="editarSenha()"  expand="full">Editar Senha</ion-button>
+
+
+  </div>
+
+</form>
+
+</div>
+
+
+<div class="ion-padding-top ion-text-left">
+  <ion-button fill="clear" (click)="sair()" >Sair</ion-button>
+</div>
+
+    
+  </div>
+
+
+
+</ion-content>

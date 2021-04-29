@@ -1,0 +1,108 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-uppercase">Confirmar Pedido</ion-title>
+
+    <ion-buttons slot="end" class="ion-margin">
+      <!--<ion-back-button defaultHref="/"></ion-back-button>-->
+     
+      <ion-button  (click)="irParaAjuda()" class="ion-text-capitalize">Ajuda</ion-button>  
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-margin">
+
+
+
+    <p><small>Realizado às 01:20 - 08/04/2021</small></p>
+
+  <p class="pedidoConcluido ion-text-center">
+    <span>Pedido em andamento</span>
+      
+    </p>
+    
+    
+  <h6>Pedido nº #10011001</h6>
+
+
+  <ion-item class="borderLine ion-margin-bottom" lines="none">
+    <img src="assets/novalgina-1g.png"  slot="start" width="35" />
+  <ion-label>
+    <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos</strong>
+    <p>R$17,90</p>
+  </ion-label>
+</ion-item>
+
+
+<ion-item class="borderLine ion-margin-bottom" lines="none">
+  <img src="assets/novalgina-1g.png"  slot="start" width="35" />
+<ion-label>
+  <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos</strong>
+  <p>R$17,90</p>
+</ion-label>
+</ion-item>
+
+<ion-item class="borderLine ion-margin-bottom" lines="none">
+  <img src="assets/novalgina-1g.png"  slot="start" width="35" />
+<ion-label>
+  <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos</strong>
+  <p>R$17,90</p>
+</ion-label>
+</ion-item>
+  
+  
+  <ion-item class="borderLine ion-margin-bottom" lines="none">
+    <ion-icon  slot="start" name="locate-outline"></ion-icon>
+  <ion-label>
+    <strong class="ion-text-wrap">Seu pedido será entregue em</strong>
+    <p>Rua Santo Amaro 470 Itaipu - Casa de equina muro de pedra </p>
+  </ion-label>
+</ion-item>
+
+
+
+<ion-item class="borderLine ion-margin-bottom" lines="none">
+  <ion-icon  slot="start" name="pricetags-outline"></ion-icon>
+<ion-label>
+  <strong class="ion-text-wrap">Cupom de desconto utilizado</strong>
+  <p>PRIMEIRACOMPRA</p>
+</ion-label>
+</ion-item>
+
+
+
+
+<ion-item class="borderLine ion-margin-bottom" lines="none">
+  <img slot="start"  src="assets/mastercard.jpg" width="20"/>
+  
+<ion-label>
+  <strong class="ion-text-wrap">Pago no Crédito pelo app</strong>
+  <p>MasterCard **** 9587</p>
+</ion-label>
+</ion-item>
+
+
+
+
+
+<ion-item  lines="none">
+  <ion-label slot="start" >
+    <strong>Valor pago</strong>
+  </ion-label>
+  <ion-text slot="end"  (click)="editarEndereco()"><strong>R$24,80</strong></ion-text>
+  </ion-item>
+
+
+
+
+
+</div>
+
+</ion-content>
+
+

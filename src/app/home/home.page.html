@@ -1,0 +1,255 @@
+
+
+<ion-toolbar class="home">
+  <ion-title  (click)="IrParaMeusEnderecos()">Meu Endereço   <ion-icon color="danger" name="chevron-down-outline"></ion-icon></ion-title>
+
+  <ion-buttons slot="end"  class="botaoCarrinhoHead"  (click)="irParaCarrinho()">
+    <ion-button   >
+
+      <ion-icon name="cart-outline" ></ion-icon>
+
+
+    </ion-button>
+
+    <span class="badgeHome"   >
+      4
+    </span>
+    
+
+  </ion-buttons>
+</ion-toolbar>
+
+
+<ion-content  *ngIf="!semFarmacias" >
+
+ 
+     <div  class="ion-margin">
+      
+
+      <ion-slides pager="true" [options]="slideOpts" >
+        <ion-slide   style="width: 420px; height: 240px;">
+            <img src="./assets/slideHome1.jpeg"  style="width: 420px; height: 210px;  "/>
+
+        </ion-slide>
+        <ion-slide   style="width: 420px; height: 230px;">
+          <img src="./assets/slideHome2.jpeg"   style="width: 420px; height: 210px;  display: block"/>
+        </ion-slide>
+        <ion-slide    style="width: 420px; height: 230px;">
+          <img  src="./assets/slideHome3.jpeg"    style="width: 420px; height: 210px;  display: block"/>
+        </ion-slide>
+      </ion-slides>
+
+      <ion-grid>
+        <ion-row>
+         
+          <ion-col >
+            <div class="ion-text-center">
+
+              <div class="borderLineButton ion-text-left"  (click)="irParaCategoria()">
+                <img src="assets/primeiros-socorros.jpg" width="15" height="15"  class="ion-padding-right" >
+                <span class="ion-margin-start">Primeiros Socorros</span>
+              </div>
+
+            </div>
+          </ion-col>
+
+          <ion-col >
+            <div class="ion-text-center">
+
+              <div class="borderLineButton ion-text-left"  (click)="irParaCategoria()">
+                <img src="assets/vacina.jpg" width="15" height="15" class="ion-padding-right" >
+                <span class="ion-margin-start">Termômetros</span>
+              </div>
+
+            </div>
+          </ion-col>
+
+
+        
+        </ion-row>
+
+
+
+        <ion-row>
+
+
+         
+          <ion-col >
+            <div class="ion-text-center">
+
+              <div class="borderLineButton ion-text-left"  (click)="irParaCategoria()">
+                <img src="assets/comprimido.jpg" width="15" height="15"  class="ion-padding-right" >
+                <span class="ion-margin-start ion-text-left">Analgésico</span>
+              </div>
+
+            </div>
+          </ion-col>
+
+          <ion-col >
+            <div class="ion-text-center">
+
+              <div class="borderLineButton ion-text-left"  (click)="irParaCategoria()">
+                <img src="assets/vacina2.jpg" width="15" height="15"  class="ion-padding-right" >
+                <span class="ion-margin-start">Vacinas</span>
+              </div>
+
+            </div>
+          </ion-col>
+
+
+        
+        </ion-row>
+
+
+        <ion-row>
+
+
+         
+          <ion-col >
+            <div class="ion-text-center">
+
+              <div class="borderLineButton ion-text-left"  (click)="irParaCategoria()">
+                <img src="assets/pronto-socorro.jpg" width="15" height="15" class="ion-padding-right" >
+                <span class="ion-margin-start">Primeiros Socorros</span>
+              </div>
+
+            </div>
+          </ion-col>
+
+          <ion-col >
+            <div class="ion-text-center">
+
+              <div class="borderLineButton ion-text-left"  (click)="irParaCategoria()">
+                <img src="assets/curativo.jpg" width="15" height="15"  class="ion-padding-right" >
+                <span class="ion-margin-start">Curativos</span>
+              </div>
+
+            </div>
+          </ion-col>
+
+
+        
+        </ion-row>
+
+
+        
+
+
+      </ion-grid>
+
+      <br><br>
+
+
+
+
+
+      <div class="content-linha">
+        <h6 class="ion-text-uppercase ">Analgésico</h6>
+        <div class="linha " >
+          <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }" class="no-padding" >
+           
+           
+            <ion-slide *ngFor="let card of [0,1,2,3,4,5,6]" style="width: 150px; height: 280px;">
+              <ion-col  class="borderLine borderLineListagemCategoria">
+                
+
+                <div  (click)="irParaProduto()">
+
+                  <img style="width: 120px; height: 100px; " src="assets/novalgina-1g.png"/>
+
+                  <p class="nomeProdutoListagem" > Novalgina 1g Sanofi Aventis #{{ card }}</p>
+                 
+                </div>
+                
+                <p>R$17,90</p>
+                <ion-button shape="round" size="small" color="danger" (click)="addCarrinho()">
+                Adicionar
+                </ion-button>
+
+              </ion-col>
+            </ion-slide>
+          
+
+            <ion-slide *ngFor="let card of [0]" style="width: 150px; height: 280px; font-size:.75em;">
+              <ion-col (click)="irParaCategoria()">
+                  <ion-icon class="arrowVerTodos" name="arrow-forward-circle-outline"></ion-icon>
+                  <br>
+                  ver todos
+              </ion-col>
+            </ion-slide>
+
+        </ion-slides>
+        </div>
+      </div>
+      <!-- content-linha fim -->
+
+      <br>
+
+
+      <div class="content-linha">
+        <h6 class="ion-text-uppercase ">Anti-inflamatório</h6>
+        <div class="linha" >
+          <ion-slides [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
+           
+           
+            <ion-slide *ngFor="let card of [0,1,2,3,4,5,6]" style="width: 150px; height: 310px;">
+              <ion-col  class="borderLine borderLineListagemCategoria">
+                
+
+                <div  (click)="irParaProduto()">
+
+                  <img style="width: 120px; height: 100px; " src="assets/neosaldina.jpg"/>
+
+                  <p class="nomeProdutoListagem" > Neosaldina 300mg c/ 20c #{{ card }}</p>
+                 
+                </div>
+                
+                <p>R$17,90</p>
+                <ion-button shape="round" size="small" color="danger" (click)="addCarrinho()">
+                Adicionar
+                </ion-button>
+
+              </ion-col>
+            </ion-slide>
+          
+
+            <ion-slide *ngFor="let card of [0]" style="width: 150px; height: 280px; font-size:.75em;">
+              <ion-col (click)="irParaCategoria()">
+                  <ion-icon class="arrowVerTodos" name="arrow-forward-circle-outline"></ion-icon>
+                  <br>
+                  ver todos
+              </ion-col>
+            </ion-slide>
+
+        </ion-slides>
+        </div>
+      </div>
+      <!-- content-linha fim -->
+
+
+  </div>
+
+
+
+
+
+</ion-content>
+
+
+
+  <ion-content *ngIf="semFarmacias==true" >
+
+      
+  <div  class="ion-margin ion-text-center ion-padding-top">
+       
+    <p>Nenhuma farmácia aberta no momento =(</p>
+
+    <p>Por favor, tente novamente em outro horário ou em outro endereço.</p>
+
+
+    <ion-button size="large" (click)="IrParaMeusEnderecos()"  >Alterar Endereço</ion-button>
+
+</div>
+
+
+</ion-content>

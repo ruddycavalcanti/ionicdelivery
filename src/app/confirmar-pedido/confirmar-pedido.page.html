@@ -1,0 +1,75 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-uppercase">Confirmar Pedido</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-margin">
+  
+  <ion-item class="borderLine ion-margin-bottom" lines="none">
+    <ion-icon  slot="start" name="locate-outline"></ion-icon>
+  <ion-label>
+    <strong class="ion-text-wrap">Entregar em</strong>
+    <p>Rua Santo Amaro 470 Itaipu - Casa de equina muro de pedra </p>
+  </ion-label>
+</ion-item>
+
+
+
+<ion-item class="borderLine ion-margin-bottom" lines="none">
+  <ion-icon  slot="start" name="pricetags-outline"></ion-icon>
+<ion-label>
+  <strong class="ion-text-wrap">Cupom de desconto</strong>
+  <p>PRIMEIRACOMPRA</p>
+</ion-label>
+</ion-item>
+
+
+
+
+<ion-item class="borderLine ion-margin-bottom" lines="none">
+  <img slot="start"  src="assets/mastercard.jpg" width="20"/>
+  
+<ion-label>
+  <strong class="ion-text-wrap">Crédito pelo app</strong>
+  <p>MasterCard **** 9587</p>
+</ion-label>
+</ion-item>
+
+
+
+
+
+<ion-item  lines="none">
+  <ion-label slot="start" >
+    <strong>Total a pagar</strong>
+  </ion-label>
+  <ion-text slot="end"  (click)="editarEndereco()"><strong>R$24,80</strong></ion-text>
+  </ion-item>
+
+
+
+
+
+
+    <br>
+
+  <ion-button  size="large"  [routerLink]="['/pedido']" [queryParams]="{ pedidoConcluido: false }"  expand="full">
+    Concluir Pedido
+     
+    
+   </ion-button>
+ 
+
+
+</div>
+
+</ion-content>
+
+

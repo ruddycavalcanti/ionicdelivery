@@ -1,0 +1,79 @@
+
+<ion-content >
+
+  <div class="loginRegister ion-padding ion-text-center"  >
+
+ 
+              <p  >
+                      <img  src="assets/imgs/logo.jpg" class="logo" width="200"  />
+                  </p>
+              
+               <p>Acesse sua conta com seu email ou uma das suas redes sociais.</p>
+               
+              
+              <div class="conteudoLogin">
+              
+              
+                  <form  #f="ngForm" (ngSubmit)="loginUser(f)">
+              
+                      <ion-item>
+                          <ion-label  position="floating"><ion-icon slot="start" name="mail-outline"></ion-icon> Email</ion-label>
+                          <ion-input name="email"  ngModel  required  type="email" value=""></ion-input>
+                      </ion-item>
+                  
+                      
+                      <ion-item >
+                          <ion-label  position="floating"><ion-icon slot="start" name="key-outline"></ion-icon> Senha  </ion-label>
+                          <ion-input name="password"  ngModel  required  type="password" value=""></ion-input>
+                      </ion-item>
+
+                      <div class="ion-margin-top">
+                        <ion-button  size="large" type="submit"  (click)="irParaHome()" expand="block">Entrar</ion-button>
+                      </div>
+                  
+                        <br>
+                          <p (click)="irParaForgetPassword()" class="ion-text-center">Esqueceu sua senha ?</p>
+                         
+                  </form> 
+
+                  <p class="ion-margin-top ion-margin-bottom ion-text-center">OU</p>
+                  
+                  
+                  <div  class="botoesLoginMidias">
+
+                    
+         
+              
+                  <div class="ion-margin-top">
+
+                    <div (click)="loginFacebook()" expand="full"  class="fbBtn ion-margin-bottom btn "  > 
+                      <ion-icon slot="start" class="ion-margin-end" name="logo-facebook"></ion-icon>
+                      Entrar com Facebook
+                    </div>
+
+
+                    <div (click)="loginGoogle()" expand="full"  class="gBtn ion-margin-bottom btn"  > 
+                      <ion-icon slot="start" class="ion-margin-end"   name="logo-google"></ion-icon>
+                      <span>Entrar com Google</span>
+                    </div>
+
+
+                    <div  *ngIf="IS_DESKTOP==false"   (click)="loginApple()" expand="full"  class="appleBtn ion-margin-bottom btn"  >
+                      <ion-icon slot="start" class="ion-margin-end"  name="logo-apple"></ion-icon> Entrar com Apple</div>
+
+                  </div>
+              
+                  <p  class="cadastreGratis btclick"  (click)="irParaRegister()"> <span class='bold'><u>Cadastre-se</u></span> grátis</p>
+  
+                  <p class="termos">Ao acessar você aceita as <span class="primario btclick" (click)="abrirLinkTermos()">políticas e termos de uso.</span> </p>
+              
+               
+              </div>
+              
+              </div>
+                
+    
+  
+</div>
+  </ion-content>
+  

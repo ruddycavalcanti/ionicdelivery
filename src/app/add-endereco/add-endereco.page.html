@@ -1,0 +1,52 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+  
+    </ion-buttons>
+    <ion-title class="ion-text-uppercase">Adicionar Endereço</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div  class="ion-margin ion-text-center">
+
+    <p>R. Santo Amaro, 470<br>
+    <small>Itaipu, Niterói, RJ</small></p>
+
+  <form >
+
+    <ion-item>
+      <ion-label position="floating">Número</ion-label>
+      <ion-input type="number" name="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Complemento</ion-label>
+      <ion-input type="text"   placeholder="Apto / Bloco / Casa" name="title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ponto de Referência</ion-label>
+      <ion-input type="text" placeholder="Entrar pela rua do ipiranga, casa a 100m a direita, casa de muro de pedra, de esquina."   name="title"></ion-input>
+    </ion-item>
+
+   
+      <p class="ion-text-left">Favoritar como</p>
+      <ion-button class="ion-float-left"  fill="outline"class="ion-margin-start" > <ion-icon name="home-outline" class="ion-margin-end"></ion-icon>Casa</ion-button>
+      <ion-button class="ion-float-left" fill="outline" class="ion-margin-start"><ion-icon name="cafe-outline" class="ion-margin-end"></ion-icon> Trabalho</ion-button>
+ 
+<br>
+ 
+    
+<br>
+   
+    <ion-button type="submit" size="large" (click)="salvarEndereco()"  expand="full">Salvar Endereço</ion-button>
+
+
+  </form>
+
+</div>
+
+</ion-content>

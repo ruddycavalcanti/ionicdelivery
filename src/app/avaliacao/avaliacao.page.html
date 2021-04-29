@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-uppercase">Avaliação</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="ion-margin">
+
+  <h1>Avalie seu pedido</h1>
+
+  <p><small>Realizado conclúido às 05:40 - 08/04/2021</small></p>
+
+
+    
+  <h6>Pedido nº #10011001</h6>
+
+  <ion-item>1x Neosaldina</ion-item>
+
+  <ion-item>1x Neosaldina</ion-item>
+
+
+  <br>
+
+  <h4>O que achou do pedido?</h4>
+  <div class="estrelas">
+    <ion-icon name="star"  color="warning"></ion-icon>
+    <ion-icon name="star" color="warning"></ion-icon>
+    <ion-icon name="star"  color="warning"></ion-icon>
+    <ion-icon name="star" color="warning"></ion-icon>
+    <ion-icon name="star-outline"></ion-icon>
+  </div>
+
+
+  <ion-item lines="none" class="ion-no-padding">
+    <ion-label position="stacked"><ion-icon slot="start" name="chatbubble-ellipses-outline"></ion-icon> Deixe seu comentário</ion-label>
+    <ion-textarea rows="3" cols="20" placeholder="Conte-nos o que aconteceu"></ion-textarea>
+  </ion-item>
+  
+
+  <br>
+  
+  <h4>O que achou da entrega?</h4>
+  <div class="estrelas">
+    <ion-icon name="star"  color="warning"></ion-icon>
+    <ion-icon name="star" color="warning"></ion-icon>
+    <ion-icon name="star"  color="warning"></ion-icon>
+    <ion-icon name="star" color="warning"></ion-icon>
+    <ion-icon name="star-outline"></ion-icon>
+  </div>
+
+
+  <ion-item lines="none" class="ion-no-padding">
+    <ion-label position="stacked"><ion-icon slot="start" name="chatbubble-ellipses-outline"></ion-icon> Deixe seu comentário</ion-label>
+    <ion-textarea rows="3" cols="20" placeholder="Conte-nos o que aconteceu"></ion-textarea>
+  </ion-item>
+  
+
+
+  <ion-row class="ion-margin-top">
+    <ion-col class="ion-text-center ion-no-padding">
+      <ion-button (click)="avaliar()" expand="block">Avaliar</ion-button>
+    </ion-col>
+  </ion-row>
+  
+
+</div>
+
+</ion-content>

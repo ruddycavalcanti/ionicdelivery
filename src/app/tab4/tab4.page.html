@@ -1,0 +1,83 @@
+<ion-content class="minha-conta">
+
+<ion-item lines="full" >
+  <ion-avatar slot="start">
+    <img src="assets/imgs/me.jpg" class="ion-rounded" class="ion-padding-right">
+  </ion-avatar>
+  <ion-label >
+    <h2>Ruddy Cavalcanti</h2>
+  </ion-label>
+</ion-item>
+
+
+<div class="ion-margin">
+
+
+<ion-item  (click)="irParaChats()" lines="full">
+  <ion-icon name="chatbubble-ellipses-outline" slot="start"></ion-icon>
+
+<ion-label >
+  <h2>Chats</h2>
+  <p>Minhas conversas<br>
+</ion-label>
+<ion-badge color="danger"  slot="end">2</ion-badge>
+
+<ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+</ion-item>
+
+
+
+ 
+<ion-item  (click)="irParaNotificacoes()" lines="full">
+
+    <ion-icon  slot="start" name="notifications-outline"></ion-icon>
+
+  <ion-label >
+    <h2>Notificações</h2>
+    <p>Minha central de notificações<br>
+  </ion-label>
+  <ion-badge color="danger"  slot="end">2</ion-badge>
+
+  <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+</ion-item>
+  
+  <ion-item lines="full"  (click)="irParaCupons()">
+      <ion-icon  slot="start" name="pricetags-outline"></ion-icon>
+
+    <ion-label >
+      <h2>Cupons</h2>
+      <p>Meus cupons de desconto<br>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+  </ion-item>
+
+  <ion-item lines="full"  (click)="irParaFormasPgto()">
+    <ion-icon  slot="start" name="card-outline"></ion-icon>
+    <ion-label >
+      <h2>Forma de pagamento</h2>
+      <p>Minhas formas de pagamento<br>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+  </ion-item>
+
+  <ion-item (click)="irParaEnderecos()"  lines="full">
+    <ion-icon  slot="start" name="location-outline"></ion-icon>
+    <ion-label >
+      <h2>Endereços</h2>
+      <p>Meus endereços de entrega<br>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+  </ion-item>
+
+
+  <ion-item lines="full"   (click)="irParaMeusDados()">
+    <ion-icon  slot="start" name="person-outline"></ion-icon>
+    <ion-label>
+      <h2>Meus dados</h2>
+      <p>Minhas informações da conta<br>
+    </ion-label>
+    <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+  </ion-item>
+
+</div>
+</ion-content>

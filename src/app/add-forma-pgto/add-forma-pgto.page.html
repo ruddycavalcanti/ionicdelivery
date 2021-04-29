@@ -1,0 +1,71 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+  
+    </ion-buttons>
+    <ion-title class="ion-text-uppercase">Adicionar Forma de Pagamento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div  class="ion-margin ion-text-center">
+
+  <p>Faremos uma pequena cobrança com devolução automática para o cadastramento do cartão.</p>
+
+  <img src="assets/cartoes.png"/>
+
+
+  <form #f="ngForm">
+
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select placeholder="Tipo do Cartão" name="tipoCartao"  [(ngModel)]="tipoCartao" required ngModel>
+        <ion-select-option value="credito">Crédito</ion-select-option>
+        <ion-select-option value="debito">Débito</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Número do cartão</ion-label>
+      <ion-input type="number" name="numeroCartao"  [(ngModel)]="numeroCartao" required ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nome do titular</ion-label>
+      <ion-input type="text"  name="nomeTitular"  [(ngModel)]="nomeTitular" required ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">CPF/CNPJ do titular</ion-label>
+      <ion-input type="tel" [(ngModel)]="cpfCnpj" required (keyup)="cpfCnpj=format(cpfCnpj)" name="cpfCnpj" maxlength="14" ngModel></ion-input>
+      <ion-text slot="end"  *ngIf="isValid!==false" color="danger" class="ion-padding-top ion-text-left">CPF/CNPJ Inválido</ion-text>
+    </ion-item>
+  
+
+    <ion-item>
+      <ion-label position="floating">Apelido do cartão (opcional)</ion-label>
+      <ion-input type="text"  name="apelidoCartao"  [(ngModel)]="apelidoCartao"  ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Validade</ion-label>
+      <ion-input   type="tel"   [(ngModel)]="validade" required (keyup)="validade=formatValidade(validade)" name="validade" maxlength="5" ngModel></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">CVV</ion-label>
+      <ion-input type="tel" maxlength="4" name="cvv"  [(ngModel)]="cvv" required ngModel ></ion-input>
+    </ion-item>
+    
+<br>
+   
+    <ion-button  [disabled]="!f.valid"  type="submit" size="large"   (click)="salvarFormaPgto()"  expand="full">Salvar</ion-button>
+
+
+  </form>
+
+</div>
+
+</ion-content>

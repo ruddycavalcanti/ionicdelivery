@@ -1,0 +1,54 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-center ion-text-uppercase">Analgésico</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    
+  <ion-item >
+    <ion-thumbnail slot="start">
+      <img src="assets/novalgina-1g.png"/>
+    </ion-thumbnail>
+    <ion-label (click)="irParaProduto()">
+      <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos #{{ card }}</strong>
+      <p>R$17,90</p>
+    </ion-label>
+    <ion-button  slot="end" color="danger" (click)="addCarrinho()" >Adicionar</ion-button>
+  </ion-item>
+
+
+  <ion-item >
+    <ion-thumbnail slot="start"  (click)="irParaProduto()">
+      <img src="assets/novalgina-1g.png"/>
+    </ion-thumbnail>
+    <ion-label (click)="irParaProduto()">
+      <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos #{{ card }}</strong>
+      <p>R$17,90</p>
+    </ion-label>
+    <ion-button  slot="end" color="danger" (click)="addCarrinho()" >Adicionar</ion-button>
+  </ion-item>
+
+
+    <ion-item >
+      <ion-thumbnail slot="start"  (click)="irParaProduto()">
+        <img src="assets/novalgina-1g.png"/>
+      </ion-thumbnail>
+      <ion-label (click)="irParaProduto()">
+        <strong class="ion-text-wrap">Novalgina 1g Sanofi Aventis 10 Comprimidos #{{ card }}</strong>
+        <p>R$17,90</p>
+      </ion-label>
+      <ion-button  slot="end" color="danger" (click)="addCarrinho()" >Adicionar</ion-button>
+    </ion-item>
+    
+
+
+</ion-content>

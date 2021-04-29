@@ -1,0 +1,82 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-uppercase">Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="ion-margin">
+
+<ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="type" value="sunny">
+  <ion-segment-button value="abertos">
+    <ion-label>Abertos</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="finalizados">
+    <ion-label>Finalizados</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+
+
+<div [ngSwitch]="type">
+
+
+  <ion-list *ngSwitchCase="'abertos'">
+    
+    <div class="ion-margin">
+      <div class="ion-margin ion-text-center">
+        <h5>Nenhuma conversa por aqui.</h5>
+        <p>Quando você tiver uma conversa com uma farmácia, entregador ou com nosso atendimento, ela aparecá aqui.</p>
+      </div>
+    </div>
+
+
+  </ion-list>
+
+
+  <ion-list *ngSwitchCase="'finalizados'">
+    
+
+    <ion-card (click)="irParaConversa()">
+      <ion-item lines="none">
+        <ion-icon name="ticket-outline"  slot="start" ></ion-icon>
+        <ion-label  (click)="irParaPedido()" >
+          <h2>Farmais</h2>
+          <small>Pedido 2350 - 02/04/2021</small>
+        </ion-label>
+      
+  <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+      </ion-item>
+    
+      <ion-card-content class="chatsDivisor ion-margin">
+        <ion-row >
+          <ion-col class="ion-text-left">
+              <p>Entregador</p>
+              <small>estou no portão</small>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <p >02/04/2021</p>
+            <ion-icon name="location-outline" slot="end" ></ion-icon>
+          </ion-col>
+        </ion-row>
+        
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+  </ion-list>
+
+</div>
+
+
+
+ 
+
+</div>
+
+</ion-content>

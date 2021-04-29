@@ -1,0 +1,123 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-uppercase">Cupons</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button   (click)="addCupom()" >
+        <ion-icon  name="add-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-margin">
+
+<ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="type" value="sunny">
+  <ion-segment-button value="ativos">
+    <ion-label>Ativos</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="indisponiveis">
+    <ion-label>Indisponíveis</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+
+
+<div [ngSwitch]="type">
+  <ion-list *ngSwitchCase="'ativos'">
+    
+
+    <ion-card>
+      <ion-item lines="none">
+        <ion-icon name="ticket-outline"  slot="start" ></ion-icon>
+        <ion-label  (click)="irParaPedido()" >
+          <h2>R$15,00 para a primeira compra</h2>
+          <small>Válido para pedidos na primeira compra no app</small>
+        </ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        <ion-row>
+          <ion-col class="ion-text-center  ion-text-left">
+            <ion-text fill="clear" (click)="verRegrasCupom()" class="ion-text-left">
+                <ion-text  color="primary">Ver regras
+               <ion-icon name="chevron-down-outline"></ion-icon></ion-text>
+               <p class="ion-text-left ion-padding-top"  *ngIf="regrasAbertas === true">
+                Válido para pedido em Mercado acima de R$80<br>
+              - Válido para pedidos acima de R$80 (sem considerar a taxa de entrega).<br>
+            - Data de validade: 23h59 de hoje ou até atingir a quantidade de cupons disponíveis.<br>
+          - Forma de pagamento: Pagamento pelo app ou na entrega.<br>
+        - Limite de uso: 1 vez por usuário<br>
+       - Não cumulativo com outras promoções.</p>
+            </ion-text>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-text >Válido até 07/04</ion-text>
+          </ion-col>
+        </ion-row>
+        
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+    <ion-card class="cupomAtual" >
+      <ion-item  lines="none">
+        <ion-icon name="ticket-outline" color="primary" slot="start" ></ion-icon>
+        <ion-label  (click)="irParaPedido()" >
+          <h2>R$12,00 para em conhecer novas farmácias</h2>
+          <small>Válido para pedidos na primeira farmácia no app</small>
+        </ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        <ion-row>
+          <ion-col class="ion-text-center  ion-text-left">
+            <ion-text fill="clear" (click)="verRegrasCupom()" class="ion-text-left">
+              <ion-text  color="primary">Ver Regras
+               <ion-icon name="chevron-down-outline"></ion-icon></ion-text>
+               <p class="ion-text-left ion-padding-top"  *ngIf="regrasAbertas === true" color="dark">
+                Válido para pedido em Mercado acima de R$80<br>
+              - Válido para pedidos acima de R$80 (sem considerar a taxa de entrega).<br>
+            - Data de validade: 23h59 de hoje ou até atingir a quantidade de cupons disponíveis.<br>
+          - Forma de pagamento: Pagamento pelo app ou na entrega.<br>
+        - Limite de uso: 1 vez por usuário<br>
+       - Não cumulativo com outras promoções.</p>
+            </ion-text>
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-text >Válido até 07/04</ion-text>
+          </ion-col>
+        </ion-row>
+        
+      </ion-card-content>
+    </ion-card>
+
+
+
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'indisponiveis'">
+    
+    <div class="ion-margin">
+      <div class="ion-margin ion-text-center">Nenhuma novidade por aqui. Volte mais tarde</div>
+    </div>
+
+
+  </ion-list>
+</div>
+
+
+
+ 
+
+</div>
+
+</ion-content>

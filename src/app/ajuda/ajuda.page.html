@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center ion-text-uppercase">Ajuda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <h3 class="ion-margin-start">Último Pedido</h3>
+  <ion-card>
+    <ion-item lines="none" class="borderLineBottom">
+      <ion-thumbnail slot="start">
+        <ion-img style="width: 50px; height: 50px;" src="assets/neosaldina.jpg"></ion-img>
+      </ion-thumbnail>
+      <ion-label  (click)="irParaPedido()" >
+        <h4>Pedido em andamento - #10011001</h4>
+        <small>25/03/2021</small>
+      </ion-label>
+      <ion-icon name="chevron-forward-outline" slot="end" ></ion-icon>
+    </ion-item>
+  
+    <ion-card-content>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button fill="clear" (click)="irParaAjuda()" >Ajuda</ion-button>
+        </ion-col>
+        
+      </ion-row>
+      
+    </ion-card-content>
+  </ion-card>
+  
+  
+  
+  <br>
+    
+  <h5 class="ion-margin-start">Como podemos te ajudar?</h5>
+  
+  
+  <ion-card >
+    <ion-item  lines="none">
+      <ion-icon name="ticket-outline"  slot="start" ></ion-icon>
+      <ion-label  (click)="irParaTopicoAjuda()" >
+        <h2>Algum problema com pedidos?</h2>
+        <small>Entre em contato conosco</small>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  
+  
+  <ion-card >
+    <ion-item  lines="none">
+      <ion-icon name="ticket-outline"  slot="start" ></ion-icon>
+      <ion-label  (click)="irParaTopicoAjuda()" >
+        <h2>Algum problema com pedidos?</h2>
+        <small>Entre em contato conosco</small>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+
+</ion-content>

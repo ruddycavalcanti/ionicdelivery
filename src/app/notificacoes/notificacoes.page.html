@@ -1,0 +1,84 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!--<ion-back-button defaultHref="/"></ion-back-button>-->
+     
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+  
+    </ion-buttons>
+    <!--<ion-icon defaultHref="/" name="chevron-back-outline"></ion-icon>-->
+    <ion-title class="ion-text-center ion-text-uppercase">Notificações</ion-title>
+
+    <ion-buttons slot="end" class="ion-margin">
+      <!--<ion-back-button defaultHref="/"></ion-back-button>-->
+     
+      <ion-button  (click)="limparNotificacoes()" class="ion-text-capitalize">Limpar</ion-button>  
+    </ion-buttons>
+
+ 
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding-top">
+
+
+  <ion-item-sliding>
+      
+    <ion-item >
+      <ion-avatar slot="start">
+        <img src="assets/imgs/me.jpg" width="30" height="30">
+      </ion-avatar>
+      <ion-label>
+        <strong class="ion-text-wrap">Notificação 2</strong>
+        <p>Você foi promovido.</p>
+      </ion-label>
+
+      <ion-text slot="end" class="horaNotificacao">5 hrs</ion-text>
+    </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="removerNotificacao()" color="danger" expandable>
+          Remover
+        </ion-item-option>
+      </ion-item-options>
+
+  </ion-item-sliding>
+
+
+
+  <ion-item-sliding>
+      
+    <ion-item >
+      <ion-avatar slot="start">
+        <img src="assets/imgs/me.jpg" width="30" height="30">
+      </ion-avatar>
+      <ion-label>
+        <strong class="ion-text-wrap">Notificação 1</strong>
+        <p>Você foi promovido.</p>
+      </ion-label>
+      
+
+      <ion-text slot="end" class="horaNotificacao">2 dias</ion-text>
+    </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option (click)="removerNotificacao()" color="danger" expandable>
+          Remover
+        </ion-item-option>
+      </ion-item-options>
+
+  </ion-item-sliding>
+
+
+
+
+  <div class="fullheight xc" style="height: 100%; display: flex;
+  align-items: center;
+  justify-content: center;">
+    <div>Nenhuma novidade por aqui. Volte mais tarde</div>
+  </div>
+
+
+    
+</ion-content>

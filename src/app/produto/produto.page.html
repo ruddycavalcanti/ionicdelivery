@@ -1,0 +1,107 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+       <ion-back-button color="primary" icon="chevron-back"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title class="ion-text-wrap  ion-text-center ">{{title}}</ion-title>
+
+    <ion-buttons slot="end"  class="botaoCarrinhoHead"  (click)="irParaCarrinho()">
+      <ion-button   >
+  
+        <ion-icon name="cart-outline" ></ion-icon>
+  
+  
+      </ion-button>
+  
+      <span class="badgeHome"   >
+        4
+      </span>
+      
+  
+    </ion-buttons>
+
+    
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-margin">
+
+    <div class=" ion-text-center">
+
+      <img style="width: 120px; height: 100px;" src="assets/novalgina-1g.png"/>
+
+    </div>
+
+    <p >{{title}}</p>
+
+    <h5>R$17,90</h5>
+
+
+
+<ion-item lines="none" class="ion-no-padding">
+  <ion-label position="stacked"><ion-icon slot="start" name="chatbubble-ellipses-outline"></ion-icon> Alguma observação?</ion-label>
+  <ion-textarea rows="2"  placeholder="Ex.: Tirar a cebola,maionese à parte, ponto da carne, etc"></ion-textarea>
+</ion-item>
+
+
+<br>
+
+
+
+
+  <div class="descricao"  *ngIf="descricao != ''">
+
+    <strong class="ion-padding-top ion-text-uppercase">Descrição</strong>
+    <p>{{descricao}}</p>
+
+  </div>
+
+</div>
+
+
+</ion-content>
+
+<ion-footer>
+
+  <ion-grid  class="ion-padding">
+    <ion-row>
+  
+        <ion-col size="4" class="ion-text-center">
+          <div class="divAddRemovCarrinho">
+  
+            <ion-row>
+              <ion-col size="4">
+                <span class="addRemCarrinho" (click)="diminuirCarrinho()">-</span> 
+              </ion-col>
+  
+              <ion-col size="4" class="ion-no-margin  ion-no-padding">
+                <ion-input type="number" value="{{itensCarrinho}}" min="1"></ion-input> 
+              </ion-col>
+  
+  
+              <ion-col size="4">
+                   <span class="addRemCarrinho" (click)="aumentarCarrinho()">+</span>
+               </ion-col>
+             </ion-row>
+  
+          </div>
+        </ion-col>
+  
+  
+  <ion-col >
+  
+    <div color="primary"  expand="block" class=" addCarrinhoBtn" (click)="addCarrinho()">
+     <span class="ion-float-left">Adicionar</span>
+     <span class="ion-float-right">R$17,90</span>
+    </div>
+  
+  </ion-col>
+  
+  </ion-row>
+  </ion-grid>
+</ion-footer>
